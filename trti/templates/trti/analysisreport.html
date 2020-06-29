@@ -1,0 +1,265 @@
+{%extends 'trti/base.html'%} {% load static%} {%block content%}
+
+<div class="container pt-3">
+    <div class="row justify-content-start">
+        <div class="col d-flex justify-content-start">
+            <!-- <div class="social-media"> -->
+            <img width="150" height="150" src="{% static 'mysite/images/trti-logo.jpg' %}" class="" style="padding-bottom: 10px;"> </a>
+
+        </div>
+        <div class="col">
+            <a class="navbar-brand" style="font-size: xx-large; text-align: center; padding-bottom: 5px; padding-top:40px;" href="{% url 'home' %}">Skill Development <span>And Enterprenureship for Tribal youth</span></a>
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+<!-- Navigation -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg my-navbar">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About us</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'aboutus' %}">Background</a>
+                        <a class="dropdown-item" href="{% url 'vision' %}">Vision and Mission</a>
+                        <a class="dropdown-item" href="{% url 'contactus' %}">Contact Us</a>
+
+                    </ul>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'whoswho' %}">Who's who</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Organizations</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://nsdcindia.org/">NSDC</a>
+                        <a class="dropdown-item" href="#">TDD</a>
+                        <a class="dropdown-item" href="https://trti.maharashtra.gov.in/index.php/en/">TRTI</a>
+                        <a class="dropdown-item" href="http://www.ctara.iitb.ac.in/">IIT,Bombay</a>
+                        <a class="dropdown-item" href="{% url 'umainstitutes' %}">UMA Institutes</a>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Maps</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'map' %}">Focus areas & Institutes</a>
+                        <a class="dropdown-item" href="{% url 'villages' %}">TRTI villages</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Skill development</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Schemes</a>
+                        <a class="dropdown-item" href="#">Standard and Quality</a>
+                        <a class="dropdown-item" href="#">Training Providers</a>
+                        <a class="dropdown-item" href="#">Innovations</a>
+                        <a class="dropdown-item" href="{% url 'coursesdetails' %}">Courses Available</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Enterprenurship</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'proposedschemes' %}">Proposed Scheme</a>
+                        <a class="dropdown-item" href="#">Partners</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Resources</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'gallery' %}">Photogallery</a>
+                        <a class="dropdown-item" href="{% url 'links' %}">Important Links</a>
+                        <a class="dropdown-item" href="{% url 'reports' %}">Survey Reports</a>
+                        <a class="dropdown-item" href="#">Guidelines</a>
+                        <a class="dropdown-item" href="#">Monthly Summary</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'register' %}">Login/Register</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="container">
+    <div class="card leftfloat " style="width: 18rem;">
+        <img src="/static/mysite/images/pdf.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Survey Report of Amravati</h5>
+            <p class="card-text">upload date: <br> uploaded by : TRTI</p>
+            <a href="/static/mysite/data/All Village Data.pdf" class="btn btn-primary" download>View</a>
+        </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+        <img src="/static/mysite/images/pdf.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Amravati Workshop Report</h5>
+            <p class="card-text">upload date: 13 April 2019 <br> uploaded by : TRTI</p>
+            <a href="/static/mysite/data/Amravati workshop_Report_ V1.pdf" class="btn btn-primary" download>View</a>
+        </div>
+    </div>
+    <hr>
+
+    <div class="card leftfloat " style="width: 18rem;">
+        <img src="/static/mysite/images/pdf.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Dhule Report</h5>
+            <p class="card-text">upload date: 13 April 2019 <br> uploaded by : TRTI </p>
+            <a href="/static/mysite/data/DHULE REPORT.pdf" class="btn btn-primary" download>View</a>
+        </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+        <img src="/static/mysite/images/pdf.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Finalised Courses PRMITR</h5>
+            <p class="card-text">upload date: 13 April 2019 <br> uploaded by : TRTI </p>
+            <a href="/static/mysite/data/finalised Courses PRMITR.pdf" class="btn btn-primary" download>View</a>
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="card leftfloat " style="width: 18rem;">
+        <img src="/static/mysite/images/pdf.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">GIT Workshop Report</h5>
+            <p class="card-text">upload date: 13 April 2019 <br> uploaded by : TRTI</p>
+            <a href="/static/mysite/data/GIT-Skill Developemnet Workshop Report.pdf" class="btn btn-primary" download>View</a>
+        </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+        <img src="/static/mysite/images/ppt.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Ratnagiri Report</h5>
+            <p class="card-text">upload date: 13 April 2019 <br> uploaded by : TRTI</p>
+            <a href="/static/data/Ratnagiri Analysis.pptx" class="btn btn-primary" download>View</a>
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="card leftfloat " style="width: 18rem;">
+        <img src="/static/mysite/images/word.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Mshadi Village Survey</h5>
+            <p class="card-text">upload date: 13 April 2019 <br> uploaded by : TRTI </p>
+            <a href="/static/mysite/data/tribal department mhsadi १७ June.docx.doc" class="btn btn-primary" download>View</a>
+        </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+        <img src="/static/mysite/images/ppt.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Amravati Workshop ppt</h5>
+            <p class="card-text">upload date: 13 April 2019 <br> uploaded by : TRTI</p>
+            <a href="/static/mysite/data/Amravati workshop - Melghat Region - Key Findings  0.1.pptx" class="btn btn-primary" download>View</a>
+        </div>
+    </div>
+    <hr>
+
+    <div class="card leftfloat " style="width: 18rem;">
+        <img src="/static/ncert/img/word.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Self Evaluation</h5>
+            <p class="card-text">upload date: 13 April 2019 <br> uploaded by : ncert </p>
+            <a href="/static/ncert/data/SelfEvaluation.doc" class="btn btn-primary" download>View</a>
+        </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+        <img src="/static/ncert/img/pdf.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Self Evaluation</h5>
+            <p class="card-text">upload date: 13 April 2019 <br> uploaded by : ncert </p>
+            <a href="/static/ncert/data/SelfEvaluation.pdf" class="btn btn-primary" download>View</a>
+        </div>
+    </div>
+    <hr>
+    <div class="card " style="width: 18rem;">
+        <img src="/static/ncert/img/pdf.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Worksheet</h5>
+            <p class="card-text">upload date: 13 April 2019 <br> uploaded by : ncert </p>
+            <a href="/static/ncert/data/resource1.pdf" class="btn btn-primary" download>View</a>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+<style>
+    .leftfloat {
+        float: left;
+    }
+</style>
+
+<!--- Footer -->
+<footer>
+    <div class="container-fluid padding ">
+        <div class="row text-center">
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>TRTI</h5>
+                <ul class="footer_sec-links" style="list-style:none">
+                    <li><a href="#">Maharashtra state,28</a></li>
+
+                    <li>
+                        <a href="#">Queen's Garden, Pune - 411 001</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>Related Links</h5>
+                <ul class="footer_sec-links" style="list-style: none;">
+                    <li><a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer">National Portal of India </a></li>
+                    <li><a href="https://tribal.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Tribal development Department </a></li>
+                    <li><a href="https://tribal.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Tribal Commissionerate </a></li>
+                    <li><a href="https://aaplesarkar.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Aaple Sarkar</a></li>
+                    <li><a href="https://tribal.nic.in" target="_blank" rel="noopener noreferrer">Ministry of Tribal Affairs-Govt of India</a></li>
+                    <li><a href="https://www.mygov.in" target="_blank" rel="noopener noreferrer">My Gov</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>Security Policy</h5>
+                <ul class="footer_sec-links" style="list-style:none">
+                    <li><a href="#">Hyperlink Policy</a></li>
+                    <li><a href="#">Terms and Conditions </a></li>
+                    <li><a href="#">Privacy Policy </a></li>
+                    <li><a href="#">Copyright Policy</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+{%endblock%}

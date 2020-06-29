@@ -1,0 +1,344 @@
+{%extends 'trti/base.html'%} {% load static%} {%block content%}
+<style>
+    /* tables still need cellspacing="0" in the markup */
+    
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    
+    th {
+        font-weight: bold;
+        vertical-align: bottom;
+    }
+    
+    td {
+        font-weight: normal;
+        vertical-align: top;
+    }
+    
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+    }
+    
+    small {
+        font-size: 85%;
+    }
+    
+    strong,
+    th {
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    td,
+    td img {
+        vertical-align: top;
+    }
+</style>
+<div class="container pt-3">
+    <div class="row justify-content-start">
+        <div class="col d-flex justify-content-start">
+            <!-- <div class="social-media"> -->
+            <img width="150" height="150" src="{% static 'mysite/images/trti-logo.jpg' %}" class="" style="padding-bottom: 10px;"> </a>
+
+        </div>
+        <div class="col">
+            <a class="navbar-brand" style="font-size: xx-large; text-align: center; padding-bottom: 5px; padding-top:40px;" href="{% url 'home' %}">Skill Development <span>And Enterprenureship for Tribal youth</span></a>
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+<!-- Navigation -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg my-navbar">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About us</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'aboutus' %}">Background</a>
+                        <a class="dropdown-item" href="{% url 'vision' %}">Vision and Mission</a>
+                        <a class="dropdown-item" href="{% url 'contactus' %}">Contact Us</a>
+
+                    </ul>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'whoswho' %}">Who's who</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Organizations</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://nsdcindia.org/">NSDC</a>
+                        <a class="dropdown-item" href="#">TDD</a>
+                        <a class="dropdown-item" href="https://trti.maharashtra.gov.in/index.php/en/">TRTI</a>
+                        <a class="dropdown-item" href="http://www.ctara.iitb.ac.in/">IIT,Bombay</a>
+                        <a class="dropdown-item" href="{% url 'umainstitutes' %}">UMA Institutes</a>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Maps</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'map' %}">Focus areas & Institutes</a>
+                        <a class="dropdown-item" href="{% url 'villages' %}">TRTI villages</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Skill development</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Schemes</a>
+                        <a class="dropdown-item" href="#">Standard and Quality</a>
+                        <a class="dropdown-item" href="#">Training Providers</a>
+                        <a class="dropdown-item" href="#">Innovations</a>
+                        <a class="dropdown-item" href="{% url 'coursesdetails' %}">Courses Available</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Enterprenurship</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'proposedschemes' %}">Proposed Scheme</a>
+                        <a class="dropdown-item" href="#">Partners</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Resources</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'gallery' %}">Photogallery</a>
+                        <a class="dropdown-item" href="{% url 'links' %}">Important Links</a>
+                        <a class="dropdown-item" href="{% url 'reports' %}">Survey Reports</a>
+                        <a class="dropdown-item" href="#">Guidelines</a>
+                        <a class="dropdown-item" href="#">Monthly Summary</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'register' %}">Login/Register</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<section class="wrapper body-wrapper">
+    <div class="container body-container" style="text-align:justify;">
+        <article class="content-block clearfix">
+            <h3 class="page-title">Important Links </h3>
+            <ul class="disc">
+
+                <table border="1" cellpadding="0" cellspacing="0" width="920">
+                    <tbody>
+                        <table width="90%" style "background-color:000000!important">
+
+                            <tr>
+                                <td width="67%" style="text-decoration:underline;">
+                                    <div align="left"><strong>Organizations</strong><br>
+                                    </div>
+                                </td>
+                                <td width="33%" style="text-decoration:underline;"><strong>Links</strong><br></td>
+                            </tr>
+
+
+                            <tr>
+                                <td>Directorate General of Training (DGT)</td>
+                                <td><a href="https://dgt.gov.in/" target="_blank">https://dgt.gov.in/</a></td>
+                            </tr>
+
+
+                            <tr>
+                                <td> National Skill Development Agency (NSDA) </td>
+                                <td><a href="https://www.nsda.gov.in/" target="_blank">https://www.nsda.gov.in/</a></td>
+                            </tr>
+
+                            <tr>
+                                <td>Directorate of Vocational Education and Training,Maharashtra state(DVET) </td>
+                                <td><a href="https://www.dvet.gov.in/mr/" target="_blank">http://www.niesbud.nic.in/ </a></td>
+                            </tr>
+
+                            <tr>
+                                <td> National Skill Development Corporation India (NSDC)</td>
+                                <td><a href="https://nsdcindia.org/" target="_blank"> https://nsdcindia.org/</a></td>
+                            </tr>
+
+                            <tr>
+                                <td>Indian Institute of Entrepreneurship (IIE)</td>
+                                <td><a href="http://iie.nic.in/" target="_blank">http://iie.nic.in/ </a></td>
+                            </tr>
+
+                        </table>
+
+                        <table border="0" cellpadding="0" cellspacing="0" width="920">
+                            <tbody>
+                                <table width="90%" style "background-color:000000!important">
+
+                                    <tr>
+                                        <td width="67%" style="text-decoration:underline;">
+                                            <div align="left"><strong>Web Portal (Training Platform/Schemes)</strong><br>
+                                            </div>
+                                        </td>
+                                        <td width="33%" style="text-decoration:underline;"><strong>Links</strong><br></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong><u>Pradhan Mantri Kaushal Vikas Yojana (PMKVY)</u></strong><br>
+                                            <p>It is the flagship scheme of the Ministry of Skill Development &amp; Entrepreneurship (MSDE) implemented by National Skill Development Corporation. The objective of this Skill Certification Scheme is to enable
+                                                a large number of Indian youth to take up industry-relevant skill training that will help them in securing a better livelihood. Individuals with prior learning experience or skills will also be assessed
+                                                and certified under Recognition of Prior Learning (RPL).</p>
+                                        </td>
+                                        <td><a href="http://pmkvyofficial.org/" target="_blank">http://pmkvyofficial.org/</a></td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong><u>National Entrepreneurship Awards</u></strong><br>
+                                            <p>MSDE has instituted the National Entrepreneurship Awards (NEA) to recognise and honor outstanding young first generation Entrepreneurs and their Ecosystem Builders for their outstanding contribution in entrepreneurship
+                                                development.
+                                            </p>
+                                        </td>
+                                        <td><a href="http://neas.gov.in//" target="_blank">http://neas.gov.in/</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><u>National Instructional Media Institute (NIMI)</u></strong><br>
+                                            <p>Online Course materials available in portal. PDFs, Interactive PDFs, Videos and E-Books available for students.</p>
+                                        </td>
+                                        <td><a href="http://www.nimilearningonline.in/" target="_blank">http://www.nimilearningonline.in/</a></td>
+                                    </tr>
+
+
+
+
+
+                                    <tr>
+                                        <td><strong><u>Skill India Portal</u></strong><br>
+                                            <p>An initative by National Skill Development Corporation of India.</p>
+                                        </td>
+                                        <td><a href="https://www.skillindia.gov.in/" target="_blank">https://www.skillindia.gov.in/ </a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><u>Udaan</u></strong><br>
+                                            <p><span id="PageContent1_lblCMS">Udaan, the Special Industry Initiative   (SII) for J&amp;K is funded by Ministry of Home Affairs and implemented   by National Skill Development Corporation (NSDC). The programme is a   part of the overall initiative for addressing economic issues in J&amp;K</span>.</p>
+                                        </td>
+                                        <td><a href="https://udaan.nsdcindia.org/" target="_blank">https://udaan.nsdcindia.org/ </a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><u>Skill Development Management System (SDMS)</u></strong><br>
+                                            <p>A portal for Training Partner/PIA/SPIA.</p>
+                                        </td>
+                                        <td><a href="https://nsdcindia.org/sdms-login" target="_blank">https://nsdcindia.org/sdms-login </a></td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td><strong><u>National Council for Vocational Training (NCVT)</u></strong><br>
+                                            <p>This portal is a one-stop information source for all Institutes and courses under the purview of the National Council of Vocational Training (NCVT).</p>
+                                        </td>
+                                        <td><a href="https://www.ncvtmis.gov.in" target="_blank">https://www.ncvtmis.gov.in </a></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong><u>Apprenticeship Training Portal</u></strong><br>
+                                            <p>Apprenticeship Registration &amp; apply for Apprenticeship Training.</p>
+                                        </td>
+                                        <td><a href="http://apprenticeship.gov.in" target="_blank">http://apprenticeship.gov.in </a><br>
+                                            <a href="https://apprenticeshipindia.org/" target="_blank">https://apprenticeshipindia.org/</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><u>Skill Management &amp; Accreditation of Training Centres (SMART)</u></strong><br>
+                                            <p>It is a portal for Training Provider and Training Centre.</p>
+                                        </td>
+                                        <td><a href="https://smart.nsdcindia.org/" target="_blank">https://smart.nsdcindia.org/ </a></td>
+                                    </tr>
+
+
+
+
+                                </table>
+
+
+
+
+
+                            </tbody>
+                        </table>
+                        <p><br>
+                        </p>
+            </ul>
+
+        </article>
+
+
+
+    </div>
+</section>
+<!--/.body-wrapper-->
+<!--- Footer -->
+<footer>
+    <div class="container-fluid padding ">
+        <div class="row text-center">
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>TRTI</h5>
+                <ul class="footer_sec-links" style="list-style:none">
+                    <li><a href="#">Maharashtra state,28</a></li>
+
+                    <li>
+                        <a href="#">Queen's Garden, Pune - 411 001</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>Related Links</h5>
+                <ul class="footer_sec-links" style="list-style: none;">
+                    <li><a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer">National Portal of India </a></li>
+                    <li><a href="https://tribal.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Tribal development Department </a></li>
+                    <li><a href="https://tribal.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Tribal Commissionerate </a></li>
+                    <li><a href="https://aaplesarkar.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Aaple Sarkar</a></li>
+                    <li><a href="https://tribal.nic.in" target="_blank" rel="noopener noreferrer">Ministry of Tribal Affairs-Govt of India</a></li>
+                    <li><a href="https://www.mygov.in" target="_blank" rel="noopener noreferrer">My Gov</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>Security Policy</h5>
+                <ul class="footer_sec-links" style="list-style:none">
+                    <li><a href="#">Hyperlink Policy</a></li>
+                    <li><a href="#">Terms and Conditions </a></li>
+                    <li><a href="#">Privacy Policy </a></li>
+                    <li><a href="#">Copyright Policy</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+{%endblock%}

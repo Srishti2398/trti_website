@@ -1,0 +1,191 @@
+{%extends 'trti/base.html'%} {% load static%} {%block content%}
+<div class="container pt-3">
+    <div class="row justify-content-start">
+        <div class="col d-flex justify-content-start">
+            <!-- <div class="social-media"> -->
+            <img width="150" height="150" src="{% static 'mysite/images/trti-logo.jpg' %}" class="" style="padding-bottom: 10px;"> </a>
+
+        </div>
+        <div class="col">
+            <a class="navbar-brand" style="font-size: xx-large; text-align: center; padding-bottom: 5px; padding-top:40px;" href="{% url 'home' %}">Skill Development <span>And Enterprenureship for Tribal youth</span></a>
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+<!-- Navigation -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg my-navbar">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About us</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'aboutus' %}">Background</a>
+                        <a class="dropdown-item" href="{% url 'vision' %}">Vision and Mission</a>
+                        <a class="dropdown-item" href="{% url 'contactus' %}">Contact Us</a>
+
+                    </ul>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'whoswho' %}">Who's who</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Organizations</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://nsdcindia.org/">NSDC</a>
+                        <a class="dropdown-item" href="#">TDD</a>
+                        <a class="dropdown-item" href="https://trti.maharashtra.gov.in/index.php/en/">TRTI</a>
+                        <a class="dropdown-item" href="http://www.ctara.iitb.ac.in/">IIT,Bombay</a>
+                        <a class="dropdown-item" href="{% url 'umainstitutes' %}">UMA Institutes</a>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Maps</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'map' %}">Focus areas & Institutes</a>
+                        <a class="dropdown-item" href="{% url 'villages' %}">TRTI villages</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Skill development</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Schemes</a>
+                        <a class="dropdown-item" href="#">Standard and Quality</a>
+                        <a class="dropdown-item" href="#">Training Providers</a>
+                        <a class="dropdown-item" href="#">Innovations</a>
+                        <a class="dropdown-item" href="{% url 'coursesdetails' %}">Courses Available</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Enterprenurship</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'proposedschemes' %}">Proposed Scheme</a>
+                        <a class="dropdown-item" href="#">Partners</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Resources</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'gallery' %}">Photogallery</a>
+                        <a class="dropdown-item" href="{% url 'links' %}">Important Links</a>
+                        <a class="dropdown-item" href="{% url 'reports' %}">Survey Reports</a>
+                        <a class="dropdown-item" href="#">Guidelines</a>
+                        <a class="dropdown-item" href="#">Monthly Summary</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'register' %}">Login/Register</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+<!--- Cards -->
+
+
+
+
+<!--- Fixed background -->
+<section class="wrapper body-wrapper">
+    <div class="container body-container" style="text-align:justify;">
+        <article class="content-block clearfix">
+            <h3 class="page-title">Proposed Scheme on Entrepreneurship Development</h3>
+            <br>
+
+            <p><strong>Catalyse  a culture shift </strong><strong>to  encourage entrepreneurship:</strong><br> To promote entrepreneurship, state and national level interactions with stakeholders will be convened. International linkages will be established
+                through internship opportunities and exchange trips to global entrepreneurship hubs such as Silicon Valley and Israel. To build awareness, national brand ambassadors will be created to champion entrepreneurial culture in India. Awards
+                will be instituted for young achievers and a National Entrepreneurship Day will be celebrated.</p>
+            <p><strong>Encourage  entrepreneurship among underrepresented groups:</strong><strong> </strong><br> Special focus will be given to the inclusion of scheduled castes &amp; scheduled tribes, minorities, differently abled, etc., and regionally
+                under-represented areas including large part of Eastern and North Eastern India in entrepreneurship programs. Special efforts will also be made to enrol incubators and mentors catering to these groups will in the national entrepreneurial
+                ecosystem. </p>
+            <p><strong>Promote Entrepreneurship  amongst youth:</strong><br> Focus will also be placed on encouraging women entrepreneurs through appropriate incentives for women owned businesses under the public procurement process. It will also be ensured
+                that gender neutral incubation/ accelerator, network of mentors, industry, resource centres and credit institutes are developed to facilitate Women Entrepreneurs. Priority will be given for mentorship and support system for women entrepreneurs
+                in existing business centres and incubators. Steps will also be taken to assemble gender disaggregated data. </p>
+            <p><strong>Foster social entrepreneurship and grassroots innovations</strong>:<br> Universities and academic institutions will be encouraged to launch a course on &lsquo;Social Entrepreneurship&rsquo;, including through online distance education,
+                to actively promote social entrepreneurship in the country. Additional support, including through fiscal incentives and incubation, will also be considered.</p>
+            <p>To foster grass-roots innovation, a focus on innovations in hubs, collaborations with organisations such as the National Innovation Foundation and promotion of Intellectual Property Rights will also be encouraged.</p>
+            <p>Further details can be found in the <a href="https://trti.maharashtra.gov.in/index.php/en/rti/rti-information" target="_blank">TRTI,RTI</a>.</p>
+        </article>
+    </div>
+</section>
+<!--/.body-wrapper-->
+
+<!--- Footer -->
+<footer>
+    <div class="container-fluid padding ">
+        <div class="row text-center">
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>TRTI</h5>
+                <ul class="footer_sec-links" style="list-style:none">
+                    <li><a href="#">Maharashtra state,28</a></li>
+
+                    <li>
+                        <a href="#">Queen's Garden, Pune - 411 001</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>Related Links</h5>
+                <ul class="footer_sec-links" style="list-style: none;">
+                    <li><a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer">National Portal of India </a></li>
+                    <li><a href="https://tribal.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Tribal development Department </a></li>
+                    <li><a href="https://tribal.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Tribal Commissionerate </a></li>
+                    <li><a href="https://aaplesarkar.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Aaple Sarkar</a></li>
+                    <li><a href="https://tribal.nic.in" target="_blank" rel="noopener noreferrer">Ministry of Tribal Affairs-Govt of India</a></li>
+                    <li><a href="https://www.mygov.in" target="_blank" rel="noopener noreferrer">My Gov</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>Security Policy</h5>
+                <ul class="footer_sec-links" style="list-style:none">
+                    <li><a href="#">Hyperlink Policy</a></li>
+                    <li><a href="#">Terms and Conditions </a></li>
+                    <li><a href="#">Privacy Policy </a></li>
+                    <li><a href="#">Copyright Policy</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock%}

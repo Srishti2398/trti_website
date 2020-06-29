@@ -1,0 +1,196 @@
+{%extends 'trti/base.html'%} {% load static%} {%block content%}
+<div class="container pt-3">
+    <div class="row justify-content-start">
+        <div class="col d-flex justify-content-start">
+            <!-- <div class="social-media"> -->
+            <img width="150" height="150" src="{% static 'mysite/images/trti-logo.jpg' %}" class="" style="padding-bottom: 10px;"> </a>
+
+        </div>
+        <div class="col">
+            <a class="navbar-brand" style="font-size: xx-large; text-align: center; padding-bottom: 5px; padding-top:40px;" href="{% url 'home' %}">Skill Development <span>And Enterprenureship for Tribal youth</span></a>
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+<!-- Navigation -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg my-navbar">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About us</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'aboutus' %}">Background</a>
+                        <a class="dropdown-item" href="{% url 'vision' %}">Vision and Mission</a>
+                        <a class="dropdown-item" href="{% url 'contactus' %}">Contact Us</a>
+
+                    </ul>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'whoswho' %}">Who's who</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Organizations</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://nsdcindia.org/">NSDC</a>
+                        <a class="dropdown-item" href="#">TDD</a>
+                        <a class="dropdown-item" href="https://trti.maharashtra.gov.in/index.php/en/">TRTI</a>
+                        <a class="dropdown-item" href="http://www.ctara.iitb.ac.in/">IIT,Bombay</a>
+                        <a class="dropdown-item" href="{% url 'umainstitutes' %}">UMA Institutes</a>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Maps</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'map' %}">Focus areas & Institutes</a>
+                        <a class="dropdown-item" href="{% url 'villages' %}">TRTI villages</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Skill development</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Schemes</a>
+                        <a class="dropdown-item" href="#">Standard and Quality</a>
+                        <a class="dropdown-item" href="#">Training Providers</a>
+                        <a class="dropdown-item" href="#">Innovations</a>
+                        <a class="dropdown-item" href="{% url 'coursesdetails' %}">Courses Available</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Enterprenurship</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'proposedschemes' %}">Proposed Scheme</a>
+                        <a class="dropdown-item" href="#">Partners</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Resources</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'gallery' %}">Photogallery</a>
+                        <a class="dropdown-item" href="{% url 'links' %}">Important Links</a>
+                        <a class="dropdown-item" href="{% url 'reports' %}">Survey Reports</a>
+                        <a class="dropdown-item" href="#">Guidelines</a>
+                        <a class="dropdown-item" href="#">Monthly Summary</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'register' %}">Login/Register</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+
+
+
+
+<!--/.body-wrapper-->
+
+<!--- Connect -->
+<div class="container-fluid padding " style="padding-top: 35px; padding-bottom: 40px; padding-left: 100px; padding-right: 100px; position:relative;">
+
+    <div class="row welcome text-center " style="padding-top: 35px; padding-bottom: 40px; padding-left: 35px;">
+        <div class="col-12 " style="text-align:justify;">
+            <h1 style="text-align:center">VISION & MISSION</h1>
+        </div>
+        <div class="col-md-12 col-lg-6" style="text-align: justify;">
+            <p class="groove">Presently Tribal Research and Training Institute, Maharashtra State, Pune is an autonomous organization of the Government of Maharashtra, which was established under the centrally sponsored scheme in 1962. Tribal research and training institutions
+                are working in the tribal-dominated states of the country to conduct research on various aspects of tribal subjects. The following objectives of the organization were set up during the establishment of this institution. Organization's
+                Objectives and Functions Evaluate the impact of various schemes implemented by the Central and State Government for the financial, educational and social development of tribal communities on tribal life. Do research on issues related to
+                tribal life and development.
+                <br>Providing pre-employement training for the officers / employees working in Tribal Development Department and for tribal students. Organizing different training sessions for the tribal Adivasi cultural museum to organize tribal arts
+                and culture, organize handicraft exhibition in different urban areas, and create a short film on tribal life. Administrative control over the functioning of Scheduled Tribes Certificate Examination Committees working in the State level
+                in Maharashtra State Tribal Research and Training Institute has been the only government organization in the state to conduct various training programs in the context of Tribal subjects for the last 50 years and tribal subjects.
+                <br> The Central Government has appointed this organization as the nodal agency for all tribal research and training institutes in the country by taking note of the work of this organization. The golden festival was celebrated by tribal
+                research and training organization in 2013 and the golden festival was inaugurated at the hands of the then President of India Mr. Pranab Mukherjee. On this occasion, this institution has been given the status of an autonomous institution
+                by fixing the following objectives by increasing the scope of the original objectives of the organization to advise and guide the Tribal for the overall development of tribals as well as for the overall development of tribals.
+                <p>
+                    <br>
+                    <a href=" # " class="btn btn-primary ">Learn More</a>
+        </div>
+        <div class="col-lg-6 ">
+            <img src="{% static 'mysite/images/img9.jpg' %}" style="object-fit: contain; " height="300 " width="auto ">
+        </div>
+
+    </div>
+    <hr>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--- Footer -->
+<footer>
+    <div class="container-fluid padding ">
+        <div class="row text-center">
+            <div class="col-md-4 ">
+
+                <hr class="light ">
+                <h5>TRTI</h5>
+                <p>Maharashtra state,28</p>
+                <p> Queen's Garden, Pune - 411 001.</p>
+
+            </div>
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>Related Links</h5>
+                <ul class="footer_sec-links" style="list-style: none;">
+                    <li><a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer">National Portal of India </a></li>
+                    <li><a href="https://tribal.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Tribal development Department </a></li>
+                    <li><a href="https://tribal.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Tribal Commissionerate </a></li>
+                    <li><a href="https://aaplesarkar.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Aaple Sarkar</a></li>
+                    <li><a href="https://tribal.nic.in" target="_blank" rel="noopener noreferrer">Ministry of Tribal Affairs-Govt of India</a></li>
+                    <li><a href="https://www.mygov.in" target="_blank" rel="noopener noreferrer">My Gov</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>Security Policy</h5>
+                <ul class="footer_sec-links" style="list-style:none">
+                    <li><a href="#">Hyperlink Policy</a></li>
+                    <li><a href="#">Terms and Conditions </a></li>
+                    <li><a href="#">Privacy Policy </a></li>
+                    <li><a href="#">Copyright Policy</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+
+{%endblock%}

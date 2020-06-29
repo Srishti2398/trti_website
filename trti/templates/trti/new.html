@@ -1,0 +1,285 @@
+{% extends 'trti/leaf.html' %} {% load static%} {% block content %}
+<style>
+    table,
+    th,
+    td {
+        border-bottom: 1px solid #ddd;
+        border-collapse: collapse;
+        padding: 2px 3px;
+        text-align: center;
+    }
+    
+    th {
+        font-weight: bold;
+    }
+    
+    tr:hover {
+        background-color: #c9dbe6;
+    }
+    
+    #checkboxes {
+        display: none;
+        /* border: 1px #dadada solid; */
+    }
+    
+    .slider {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 25px;
+        background: #D3D3D3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+    
+    .slider:hover {
+        opacity: 1;
+    }
+    
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: #FF0000;
+        cursor: pointer;
+    }
+    
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: #FF0000;
+        cursor: pointer;
+    }
+    
+    .sliderticks {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    
+    .sliderticks p {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 1px;
+        background: #D3D3D3;
+        height: 10px;
+        line-height: 40px;
+        margin: 0 0 20px 0;
+    }
+    
+    input[type="range"]::-moz-range-track {
+        padding: 0 10px;
+        background: repeating-linear-gradient(to right, #ccc, #ccc 10%, #000 10%, #000 11%, #ccc 11%, #ccc 20%);
+    }
+    
+    #checkboxes3 label {
+        display: block;
+        text-align: left;
+        margin: 10px;
+    }
+    
+    #checkboxes3 {
+        display: none;
+        /* border: 1px #dadada solid; */
+    }
+    
+    #checkboxes label {
+        display: block;
+        text-align: left;
+        margin: 10px;
+    }
+    /* #checkboxes label:hover {
+  background-color: #1e90ff;
+} */
+    
+    #checkboxes2 label {
+        display: block;
+        text-align: left;
+        margin: 10px;
+    }
+    
+    #checkboxes2 {
+        display: none;
+        /* border: 1px #dadada solid; */
+    }
+    
+    .btn {
+        margin: 10px;
+    }
+    
+    .border {
+        padding: 6px 8px;
+        border-style: groove;
+        border-radius: 5px;
+        margin: 20px;
+    }
+    
+    .info {
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+    
+    .info h4 {
+        margin: 0 0 5px;
+        color: #777;
+    }
+    
+    .table {
+        border-collapse: collapse;
+        padding: 50px;
+        font-weight: bold;
+        /* background:rgba(191, 149, 233, 0.473); */
+    }
+    /* css to customize Leaflet default styles  */
+    
+    .leaflet-popup-content-wrapper {
+        background: rgba(0, 0, 0, 0.9);
+        color: #ffffff;
+    }
+    
+    .leaflet-popup-content {
+        font-weight: bold;
+    }
+    
+    h6 {
+        color: blue;
+    }
+    
+    .select {
+        background-color: rgb(116, 109, 109);
+        width: 40%;
+        margin-left: 100px;
+        ;
+        color: white;
+    }
+    
+    .select.highlight {
+        background: rgb(0, 0, 0);
+        color: white;
+    }
+</style>
+
+<div id="side-bar" style="background-color: rgba(255, 255, 255);">
+    <!-- side-bar container -->
+
+
+    <div class="mobileShow">
+
+        <div style="text-align: center">
+            <button style="display: inline-block ;position: relative; background: #000; opacity: 0.60;" id="closebutton" name="closebutton" class="btn btn-secondary"><span class="fa fa-bars"></span></button>
+        </div>
+
+    </div>
+    <div class="tooltips" id="view">
+        <h4>SKILL DEVELOPMENT AND ENTERPRENEURSHIPFOR TRIBAL YOUTH</h4>
+        <select class='form-control' id="view_s" onchange="show(this)">
+              <option value="All"> Select District</option>
+              <option value="palghar">Amravati</option>
+              <option value="ratnagiri">Dhule</option>
+              <option value="ratnagiri">Nandurbar</option>
+              
+              <option value="amravati">Palghar</option>
+              <option value="ratnagiri">Raigad</option>
+              <option value="ratnagiri">Ratnagiri</option>
+              
+             </select>
+
+    </div>
+    <div class="border">
+        <table>
+            <tr>
+                <h6>SWOT ANALYSIS DATA</h6>
+            </tr>
+            <div class="text-center">
+                <div class="checkbox" id="skill">
+                    <tr>
+                        <tb> <label><input type="checkbox" value="{strength}" onchange=""></tb><tb><span> Strength </span></label></tb>
+                    </tr>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="{weakness}" onchange=""><span> Weakness </span></label>
+                </div>
+                <div class="checkbox" id="skill">
+                    <tr>
+                        <tb> <label><input type="checkbox" value="{opportunities}" onchange=""></tb><tb><span> Opportunities </span></label></tb>
+                    </tr>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="{skilldevelopementprogram}" onchange=""><span> Skill Developement Program </span></label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="{recommendation}" onchange=""><span> Recommendation </span></label>
+                </div>
+            </div>
+        </table>
+    </div>
+
+    &nbsp;&nbsp;
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{% static 'mysite/js/district10june.js' %}"></script>
+    <script src="{% static 'mysite/js/institute.js' %}"></script>
+
+    <script>
+        function xyz(feature, layer) {
+            layer.bindPopup("xyz")
+        };
+        L.geoJson(institute, {
+
+            onEachFeature: function(feature, layer) {
+                layer.bindPopup(`<table class ='popupclass'>
+        <tr><td>Institute Name:</td><td> ${feature.properties.Name_of_in}</td></tr>
+            <tr><td>Taluka:</td><td> ${feature.properties.Taluka}</td></tr>
+             <tr><td>Address:</td><td> ${feature.properties.Address}</td></tr>
+            <tr><td>Pincode:</td><td> ${feature.properties.Pincode}</td></tr>
+            <tr><td>Proposed courses for skill development:</td><td> ${feature.properties.Proposed_Course}</td></tr>
+            
+           
+            
+           </table>`)
+
+            }
+        }).addTo(mymap);
+
+        L.geoJson(district, {
+            onEachFeature: function(feature, layer) {
+                layer.bindPopup(`<table class ='popupclass'>
+                    <tr><td>District Name:</td><td> ${feature.properties.district}</td></tr>
+                    <tr><td>Skill Development programs:</td><td> ${feature.properties.on_skill_prgm}</td></tr>
+                    <tr><td>Opportunities:</td><td> ${feature.properties.opprtunities}</td></tr>
+                        
+                        
+                       
+                        
+                       </table>`)
+
+            }
+
+
+        }).addTo(mymap);
+    </script>
+    <script>
+        $(document).ready(function() {
+            $.getJSON("/static/mysite/trtidistrict10june.geojson", function(obj) {
+                $.each(obj.cars, function(key, value) {
+                    $("#dropDownCars").append("<option>" + value.carsName + "</option>");
+                });
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+    {% endblock %}

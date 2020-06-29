@@ -1,0 +1,187 @@
+{%extends 'trti/base.html'%} {% load static%} {%block content%}
+<div class="container pt-3">
+    <div class="row justify-content-start">
+        <div class="col d-flex justify-content-start">
+            <!-- <div class="social-media"> -->
+            <img width="150" height="150" src="{% static 'mysite/images/trti-logo.jpg' %}" class="" style="padding-bottom: 10px;"> </a>
+
+        </div>
+        <div class="col">
+            <a class="navbar-brand" style="font-size: xx-large; text-align: center; padding-bottom: 5px; padding-top:40px;" href="{% url 'home' %}">Skill Development <span>And Enterprenureship for Tribal youth</span></a>
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+<!-- Navigation -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg my-navbar">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About us</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'aboutus' %}">Background</a>
+                        <a class="dropdown-item" href="{% url 'vision' %}">Vision and Mission</a>
+                        <a class="dropdown-item" href="{% url 'contactus' %}">Contact Us</a>
+
+                    </ul>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'whoswho' %}">Who's who</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Organizations</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://nsdcindia.org/">NSDC</a>
+                        <a class="dropdown-item" href="#">TDD</a>
+                        <a class="dropdown-item" href="https://trti.maharashtra.gov.in/index.php/en/">TRTI</a>
+                        <a class="dropdown-item" href="http://www.ctara.iitb.ac.in/">IIT,Bombay</a>
+                        <a class="dropdown-item" href="{% url 'umainstitutes' %}">UMA Institutes</a>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Maps</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'map' %}">Focus areas & Institutes</a>
+                        <a class="dropdown-item" href="{% url 'villages' %}">TRTI villages</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Skill development</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Schemes</a>
+                        <a class="dropdown-item" href="#">Standard and Quality</a>
+                        <a class="dropdown-item" href="#">Training Providers</a>
+                        <a class="dropdown-item" href="#">Innovations</a>
+                        <a class="dropdown-item" href="{% url 'coursesdetails' %}">Courses Available</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Enterprenurship</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'proposedschemes' %}">Proposed Scheme</a>
+                        <a class="dropdown-item" href="#">Partners</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Resources</a>
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'gallery' %}">Photogallery</a>
+                        <a class="dropdown-item" href="{% url 'links' %}">Important Links</a>
+                        <a class="dropdown-item" href="{% url 'reports' %}">Survey Reports</a>
+                        <a class="dropdown-item" href="#">Guidelines</a>
+                        <a class="dropdown-item" href="#">Monthly Summary</a>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'register' %}">Login/Register</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+
+
+
+
+<section class="wrapper body-wrapper">
+    <div class="container body-container">
+        <article class="content-block clearfix">
+            <h3 class="page-title">Contact Us</h3>
+
+            <p><strong>Training Research &amp; Training Institute</strong><br>
+                <strong>Maharashtra state</strong><br>Queen's garden<br>Pune-411001<br> E-mail: trti.mah@nic.in<br> Phone Number:020-2633-2380<br>
+            </p>
+
+
+
+
+            <h4 class="page-title">TDD</h4>
+            <p><strong>Tribal Development Department</strong><br>
+                <strong>Deputy Secretary</strong><br> E-mail: tribal.info@maharashtra.gov.in <br> Telephone: 011-23465852 </p>
+
+            <h4 class="page-title">PRMITR </h4>
+            <p><strong>Prof Ram Meghe Institute of Technology & Research,Amravati</strong><br> Prof. Ram Meghe Square, Anjangaon Bari Rd<br>Badnera, Amravati, Maharashtra 444701<br> E-mail: principal@mitra.ac.in <br>Telephone: 0721-2681246 Ext. -202 </p>
+
+
+            <h4 class="page-title">MIT</h4>
+            <p><strong>Maharashtra Institute Of Technology,Aurangabad</strong><br> Beed Bypass Rd, MIDC<br>Disha Nagari, Aurangabad, Maharashtra 431005<br> E-mail: principal@mita.ac.in <br>Telephone: 0240 237 5375</p>
+
+            <h4 class="page-title">GIT</h4>
+            <p><strong>Gharda Institute Of Technology,</strong><br> Bombay - Goa Highway, Dabhil Naka,<br>Ratnagiri District, Lavel, Maharashtra 415708<br> E-mail: trustee@git-india.edu.in<br>Telephone: 02356 262 797</p>
+
+
+
+    </div>
+</section>
+
+
+
+<!--- Footer -->
+<footer>
+    <div class="container-fluid padding ">
+        <div class="row text-center">
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>TRTI</h5>
+                <ul class="footer_sec-links" style="list-style:none">
+                    <li><a href="#">Maharashtra state,28</a></li>
+
+                    <li>
+                        <a href="#">Queen's Garden, Pune - 411 001</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>Related Links</h5>
+                <ul class="footer_sec-links" style="list-style: none;">
+                    <li><a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer">National Portal of India </a></li>
+                    <li><a href="https://tribal.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Tribal development Department </a></li>
+                    <li><a href="https://tribal.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Tribal Commissionerate </a></li>
+                    <li><a href="https://aaplesarkar.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">Aaple Sarkar</a></li>
+                    <li><a href="https://tribal.nic.in" target="_blank" rel="noopener noreferrer">Ministry of Tribal Affairs-Govt of India</a></li>
+                    <li><a href="https://www.mygov.in" target="_blank" rel="noopener noreferrer">My Gov</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 ">
+                <hr class="light ">
+                <h5>Security Policy</h5>
+                <ul class="footer_sec-links" style="list-style:none">
+                    <li><a href="#">Hyperlink Policy</a></li>
+                    <li><a href="#">Terms and Conditions </a></li>
+                    <li><a href="#">Privacy Policy </a></li>
+                    <li><a href="#">Copyright Policy</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+{%endblock%}

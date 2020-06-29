@@ -1,0 +1,220 @@
+{% extends 'trti/base.html' %} {% load static%} {% block content %}
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="{% static 'mysite/css/style.css' %}">
+
+
+
+<!-- <script src="jquery-3.5.1/.min.js"></script> -->
+<script src="{% static 'mysite/js/script.js' %}"></script>
+<style>
+    #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    .select {
+        background-color: rgb(116, 109, 109);
+        width: 40%;
+        margin-left: 100px;
+        ;
+        color: white;
+    }
+    
+    .select.highlight {
+        background: rgb(0, 0, 0);
+        color: white;
+    }
+    
+    .active,
+    .but:hover {
+        background-color: #000;
+    }
+    
+    .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        font-size: 10px;
+    }
+    
+    .heading {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 100;
+        vertical-align: middle;
+        margin: 0;
+    }
+    
+    .spacing {
+        margin-bottom: 20px;
+        ;
+    }
+    
+    .list-group-item {
+        background-color: rgba(255, 255, 255, 0);
+        border-style: hidden;
+    }
+    
+    .box {
+        margin: 10px;
+        background-color: rgba(180, 219, 224, 0.281);
+        /* border: 5px solid rgb(255, 0, 0); */
+        border-radius: 0px 0px 0px 25px;
+    }
+    
+    table,
+    th,
+    td {
+        border-bottom: 1px solid #ddd;
+        border-collapse: collapse;
+        padding: 2px 3px;
+        text-align: center;
+    }
+    
+    th {
+        font-weight: bold;
+    }
+    
+    tr:hover {
+        background-color: #6e6e6e;
+    }
+    /* css to customize Leaflet default styles  */
+    
+    .leaflet-popup-content-wrapper {
+        background: rgba(0, 0, 0, 0.9);
+        color: #ffffff;
+    }
+    
+    .leaflet-popup-content {
+        font-weight: bold;
+    }
+</style>
+
+<title>Leaflet Example</title>
+</head>
+
+<body>
+    <script src="{% static 'mysite/js/district10june.js' %}"></script>
+    <script src="{% static 'mysite/js/institute.js' %}"></script>
+
+    <div id="sidebar">
+        <h1>leaflet-sidebar</h1>
+    </div>
+    <div id="map"></div>
+
+
+
+
+
+    <script type="text/javascript">
+        var map = L.map('map').setView([19.0760, 74.8777], 8);
+        L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=cgwRlBrAhMWn66zx6TBe', {
+            minZoom: 2.5,
+            attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
+            crossOrigin: true
+        }).addTo(map);
+
+
+
+        //   var marker = L.marker([19.0760, 74.8777]).addTo(map);
+        function xyz(feature, layer) {
+            layer.bindPopup("xyz")
+        };
+
+        // L.geoJson("trti_districts.geojson").addTo(map);
+        L.geoJson(district, {
+            onEachFeature: function(feature, layer) {
+                layer.bindPopup(`<table class ='popupclass'>
+                    <tr><td>District Name:</td><td> ${feature.properties.district}</td></tr>
+                    <tr><td>Skill Development programs:</td><td> ${feature.properties.on_skill_prgm}</td></tr>
+                    <tr><td>Opportunities:</td><td> ${feature.properties.opprtunities}</td></tr>
+                        
+                        
+                       
+                        
+                       </table>`)
+
+            }
+
+
+        }).addTo(map);
+        L.geoJson(institute, {
+
+            onEachFeature: function(feature, layer) {
+                layer.bindPopup(`<table class ='popupclass'>
+                    <tr><td>Institute Name:</td><td> ${feature.properties.Name_of_in}</td></tr>
+                        <tr><td>Taluka:</td><td> ${feature.properties.Taluka}</td></tr>
+                         <tr><td>Address:</td><td> ${feature.properties.Address}</td></tr>
+                        <tr><td>Pincode:</td><td> ${feature.properties.Pincode}</td></tr>
+                        <tr><td>Proposed courses for skill development:</td><td> ${feature.properties.Proposed_Course}</td></tr>
+                        
+                       
+                        
+                       </table>`)
+
+            }
+        }).addTo(map);
+        $("#closebutton").click(function() {
+            ctlSidebar.toggle();
+        });
+
+
+
+        objBasemaps = {
+            "Open Street Maps": lyrOSM,
+            "Imagery": lyrImagery
+        };
+
+        objOverlays = {};
+
+        // var ctlLayers = L.control.layers(objBasemaps, objOverlays).addTo(mymap);
+        var ctlSidebar = L.control.sidebar('side-bar').addTo(mymap);
+        // var ctlPan = L.control.pan().addTo(mymap);
+
+        var ctlEasybutton = L.easyButton('fa fa fa-bars', function() {
+            ctlSidebar.toggle();
+        }).addTo(mymap);
+        ctlSidebar.show();
+
+        var ctlZoomslider = L.control.zoomslider({
+            position: 'topright'
+        }).addTo(mymap);
+
+        ctlAttribute = L.control.attribution({
+            position: 'bottomleft'
+        }).addTo(mymap);
+        ctlAttribute.addAttribution('&copy; <a href="http://www.makerghat.org">makerGHAT</a>');
+
+
+        var sidebar = L.control.sidebar('sidebar', {
+            position: 'left'
+        });
+
+        map.addControl(sidebar);
+        // Show sidebar
+        sidebar.show();
+
+        // Hide sidebar
+        sidebar.hide();
+
+        // Toggle sidebar visibility
+        sidebar.toggle();
+
+        // Check sidebar visibility
+        var visible = sidebar.isVisible();
+
+        setTimeout(function() {
+            sidebar.show();
+        }, 500);
+    </script>
+    {% endblock %}
